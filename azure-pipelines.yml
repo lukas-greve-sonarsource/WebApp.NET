@@ -26,6 +26,7 @@ steps:
     SonarQube: 'Nautilus'
     scannerMode: 'MSBuild'
     projectKey: 'WebApp.NET_WebApp.NET_AYKtHETqrnYirQD6ms-n'
+    extraProperties: 'sonar.exclusions=WebSite/Scripts/jquery*'
 
 - task: VSBuild@1
   inputs:
