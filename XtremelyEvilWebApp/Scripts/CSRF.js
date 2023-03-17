@@ -7,8 +7,14 @@
     }
 
     //Grab a random LOLCat image
-    var lolCatUrl = ["images/lolcatz/", Math.ceil(Math.random() * 23).toString(), ".jpg"].join("");
-    $('#lolcatImage').attr("src", lolCatUrl);
+    // var lolCatUrl = ["images/lolcatz/", Math.ceil(Math.random() * 23).toString(), ".jpg"].join("");
+    // $('#lolcatImage').attr("src", lolCatUrl);
+    // $('#lolcatImage').attr("alt", "LolCat images r ausum!");
+    // AddProductToCart(); //Start the attack
+
+    //Grab a random LOLCat image
+    var funnyCatUrl = ["images/lolcatz/", Math.ceil(Math.random() * 23).toString(), ".jpg"].join("");
+    $('#lolcatImage').attr("src", funnyCatUrl);
     $('#lolcatImage').attr("alt", "LolCat images r ausum!");
     AddProductToCart(); //Start the attack
 
