@@ -5,6 +5,7 @@
 
 trigger:
 - master
+- fix-build
 
 pool:
   vmImage: 'windows-2019'
@@ -15,6 +16,13 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: PowerShell@2
+  displayName: "Use JDK17 by default"
+  inputs:
+    targetType: 'inline'
+    script: |
+      $jdkPath = $env:JAVA_HOME_17_X64
+      Write-Host "##vso[task.setvariable variable=JAVA_HOME]$jdkPath"
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
