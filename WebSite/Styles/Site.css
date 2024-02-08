@@ -383,6 +383,11 @@ div.productDetail > img
     height: 250px;
     width: 250px;
 }
+div.productDetail > img
+{
+    border: 0px;
+    padding: 10px;
+}
 .productTable
 {
     border: 0px;
