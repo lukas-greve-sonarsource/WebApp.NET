@@ -19,7 +19,7 @@ namespace WebSite
             {
                 connection.ConnectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
                 connection.Open();
-                var title = txtTitle.Text;
+                var title = txtTitles.Text;
                 var contents = txtContents.Text;
                 var insertSql = string.Format("insert into BlogEntries (Title, Contents, Author, PostedDate) values ('{0}','{1}','{2}',{3:yyyy-MM-dd}); select top 1 * from blogentries order by Id desc;",
                     title, contents, User.Identity.Name, DateTime.Now);
@@ -36,7 +36,7 @@ namespace WebSite
                         dataReader[3],
                         dataReader[4]);
                 txtContents.Text = "";
-                txtTitle.Text = "";
+                txtTitles.Text = "";
             }
             catch (Exception ex)
             {

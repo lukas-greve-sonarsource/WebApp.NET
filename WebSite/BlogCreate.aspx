@@ -9,7 +9,7 @@
     <asp:Label ID="lblFeedback" class="failureNotification" runat="server" Text=""></asp:Label>
     <div>
         Title:<br />
-        <asp:TextBox ID="txtTitle" class="blogCreateTitleText" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtTitles" class="blogCreateTitleText" runat="server"></asp:TextBox>
     </div>
     <div>
         Contents:<br />
