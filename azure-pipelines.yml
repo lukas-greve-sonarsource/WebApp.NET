@@ -16,13 +16,6 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: PowerShell@2
-  displayName: "Use JDK11 by default"
-  inputs:
-    targetType: 'inline'
-    script: |
-      $jdkPath = $env:JAVA_HOME_11_X64
-      Write-Host "##vso[task.setvariable variable=JAVA_HOME]$jdkPath"
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
@@ -35,6 +28,7 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'WebApp.NET_WebApp.NET_AYKtHETqrnYirQD6ms-n'
     extraProperties: 'sonar.exclusions=**/Scripts/jquery*'
+    jdkversion: 'JAVA_HOME_17_X64'
 
 - task: VSBuild@1
   inputs:
