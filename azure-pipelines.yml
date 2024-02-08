@@ -28,7 +28,6 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'WebApp.NET_WebApp.NET_AYKtHETqrnYirQD6ms-n'
     extraProperties: 'sonar.exclusions=**/Scripts/jquery*'
-    jdkversion: 'JAVA_HOME_17_X64'
 
 - task: VSBuild@1
   inputs:
@@ -43,6 +42,8 @@ steps:
     configuration: '$(buildConfiguration)'    
 
 - task: SonarQubeAnalyze@5
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
 
 - task: SonarQubePublish@5
   inputs:
