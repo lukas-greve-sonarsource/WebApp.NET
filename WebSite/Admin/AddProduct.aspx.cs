@@ -25,6 +25,7 @@ namespace WebSite.Admin
             {
                 lblMessage.Text = ex.Message;
                 lblMessage.CssClass = "Error";
+                //TODO - Refactor this
             }
         }
 
